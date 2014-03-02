@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+</head>
+    <body>
+	       <div id="map" style="width:100%; height:300px;"></div>
+        <h1>Muertes violentas Madrid 2006</h1>
+       <table border=1 cellpadding=7>
+           <tr>
+               <th>Nombre</th>
+               <th>Fecha</th>
+               <th>Tipo de muerte</th>
+               <th>Dirección</th>
+               <th>Edad</th>
+               <th>Género</th>
+           </tr>
+        
+            <tr>                
+                <td><a href="1/">Leonardo Murán</a></td>
+                <td>1/01/2006</td>
+                <td>arma de fuego</td>
+                <td>Plaza de la Rendición de Breda, Madrid</td>
+                <td>23</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="2/">Manuel Ramírez Torrecilla</a></td>
+                <td>9/01/2006</td>
+                <td>arma de fuego</td>
+                <td>Palacio de Correos y Telecomunicaciones, Madrid</td>
+                <td></td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="3/">Fredy Félix Calleja</a></td>
+                <td>23/01/2006</td>
+                <td>arma blanca</td>
+                <td></td>
+                <td>39</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="4/">Francisco Lerín Saboya</a></td>
+                <td>5/02/2006</td>
+                <td>arma de fuego</td>
+                <td>Ceramistas 5, Madrid</td>
+                <td>29</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="5/">Ramón Emilio Luzón</a></td>
+                <td>5/02/2006</td>
+                <td>arma blanca</td>
+                <td>Orense 18, Madrid</td>
+                <td>25</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="6/">Sin identificar </a></td>
+                <td>6/02/2006</td>
+                <td>arma de fuego</td>
+                <td></td>
+                <td></td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="7/">Emilio  Calderón Serrano</a></td>
+                <td>13/02/2006</td>
+                <td>arma blanca</td>
+                <td>Río Genil, Móstoles</td>
+                <td>57</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="8/">Ana Velarde</a></td>
+                <td>13/02/2006</td>
+                <td>estrangulamiento</td>
+                <td>General Martín Cerezo 2, Madrid</td>
+                <td>39</td>
+                <td>mujer</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="9/">Hugo César Serrano Blanco</a></td>
+                <td>16/02/2006</td>
+                <td>arma blanca</td>
+                <td>Versalles 4, Móstoles</td>
+                <td>36</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="10/">Sin identificar </a></td>
+                <td>18/02/2006</td>
+                <td>estrangulamiento</td>
+                <td>Torrejón de Ardoz</td>
+                <td>59</td>
+                <td>mujer</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="11/">Antonio  López Matas</a></td>
+                <td>24/02/2006</td>
+                <td>arma blanca</td>
+                <td>Simón Hernández 23, Móstoles</td>
+                <td>52</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="12/">Juan  De los Reyes Moreno</a></td>
+                <td>3/03/2006</td>
+                <td>arma de fuego</td>
+                <td>Las Barranquillas, Madrid</td>
+                <td>33</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="13/">Jorge  Hernán</a></td>
+                <td>7/03/2006</td>
+                <td>arma de fuego</td>
+                <td>Lago Balatón 6, Vicálvaro</td>
+                <td>45</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="14/">Sin identificar </a></td>
+                <td>12/03/2006</td>
+                <td>arma de fuego</td>
+                <td>Kilómetro 48,5, autopista A-1</td>
+                <td></td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="15/">Sin identificar </a></td>
+                <td>12/03/2006</td>
+                <td>arma blanca</td>
+                <td>Doctor Esquerdo 52, Madrid</td>
+                <td>50</td>
+                <td>hombre</td>
+            </tr>
+        
+            <tr>                
+                <td><a href="16/">Ulbio Ramón</a></td>
+                <td>15/03/2006</td>
+                <td>golpe mortal</td>
+                <td>Glorieta de Embajadores, Madrid</td>
+                <td>37</td>
+                <td>hombre</td>
+            </tr>
+        
+        </table>
+		        <script type="text/javascript">
+		            var map = L.map('map').setView([40.377577,-3.732337], 9);
+		            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+		                maxZoom: 18,
+		                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+		                subdomains: ['otile1','otile2','otile3','otile4']
+		            });
+		            map.addLayer(mapquestLayer);
+		            var data = {
+		              "type": "FeatureCollection",
+		              "features": [
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Leonardo Murán",
+		                    "id": "1"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.732337, 40.377577]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Manuel Ramírez Torrecilla",
+		                    "id": "2"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.693026, 40.419565]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Fredy Félix Calleja",
+		                    "id": "3"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-4.005203, 40.457658]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Francisco Lerín Saboya",
+		                    "id": "4"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.614191, 40.427553]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Ramón Emilio Luzón",
+		                    "id": "5"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.695226, 40.450499]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Sin identificar ",
+		                    "id": "6"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.929329,  40.587103]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Emilio  Calderón Serrano",
+		                    "id": "7"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.870685, 40.318459]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Ana Velarde",
+		                    "id": "8"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.719591, 40.396151]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Hugo César Serrano Blanco",
+		                    "id": "9"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.853959, 40.318729]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Sin identificar ",
+		                    "id": "10"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.479919, 40.469935]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Antonio  López Matas",
+		                    "id": "11"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.859484, 40.321387]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Juan  De los Reyes Moreno",
+		                    "id": "12"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.64274, 40.363092]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Jorge  Hernán",
+		                    "id": "13"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.603333, 40.401569]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Sin identificar ",
+		                    "id": "14"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.58223, 40.754539]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Sin identificar ",
+		                    "id": "15"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.669412, 40.418242]
+		                  }
+		                },
+		                
+		                {
+		                  "type": "Feature",
+		                  "properties": {
+		                    "full_name": "Ulbio Ramón",
+		                    "id": "16"
+		                  },
+		                  "geometry": {
+		                    "type": "Point",
+		                    "coordinates": [-3.702629, 40.405433]
+		                  }
+		                }
+		                
+		              ]
+		            };
+		            var dataLayer = L.geoJson(data, {
+		                onEachFeature: function(feature, layer) {
+		                    layer.bindPopup(
+		                        '<a href="' + feature.properties.id + '/">' +
+		                            feature.properties.full_name +
+		                        '</a>'
+		                    );
+		                }
+		            });
+		            map.addLayer(dataLayer);
+		        </script>
+		    </body>
+		</html>
