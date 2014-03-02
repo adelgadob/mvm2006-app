@@ -1,1 +1,27 @@
-hola mundo!
+<!doctype html>
+<html lang="es">
+    <head></head>
+    <body>
+        <h1>Muertes violentas Madrid 2006</h1>
+       <table border=1 cellpadding=7>
+           <tr>
+               <th>Nombre</th>
+               <th>Fecha</th>
+               <th>Tipo de muerte</th>
+               <th>Dirección</th>
+               <th>Edad</th>
+               <th>Género</th>
+           </tr>
+        {% for obj in object_list %}
+            <tr>
+                <td>{{ obj.nombre.decode('utf-8') }} {{ obj.apellidos.decode('utf-8') }}</td>
+                <td>{{ obj.fecha.decode('utf-8') }}</td>
+                <td>{{ obj.tipo.decode('utf-8') }}</td>
+                <td>{{ obj.direccion.decode('utf-8') }}</td>
+                <td>{{ obj.edad.decode('utf-8') }}</td>
+                <td>{{ obj.genero.decode('utf-8') }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>
