@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="es">
+    <head></head>
+    <body>
+        <h1>{{ object.nombre.decode('utf-8') }} {{ object.apellidos.decode('utf-8') }}, {{ object.edad.decode('utf-8') }} años de edad, {{ object.genero.decode('utf-8') }} murió el {{ object.fecha.decode('utf-8') }} en {{ object.direccion.decode('utf-8') }} por {{ object.tipo.decode('utf-8') }}
+        </h1>
+        <p>{{ object.historia.decode('utf-8') }}</p>
+        <p>Más información: <a href="{{ object.url_noticia.decode('utf-8') }}/">{{ object.url_noticia.decode('utf-8') }}</a></p>
+    </body>
+</html>

@@ -13,8 +13,8 @@
                <th>Género</th>
            </tr>
         {% for obj in object_list %}
-            <tr>
-                <td>{{ obj.nombre.decode('utf-8') }} {{ obj.apellidos.decode('utf-8') }}</td>
+            <tr>                
+                <td><a href="{{ obj.id.decode('utf-8') }}/">{{ obj.nombre.decode('utf-8') }} {{ obj.apellidos.decode('utf-8') }}</a></td>
                 <td>{{ obj.fecha.decode('utf-8') }}</td>
                 <td>{{ obj.tipo.decode('utf-8') }}</td>
                 <td>{{ obj.direccion.decode('utf-8') }}</td>
