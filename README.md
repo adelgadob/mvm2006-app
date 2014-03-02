@@ -1,0 +1,1 @@
+Ejercicio de revisión del Mapa de muertes Violentas de Madrid 2006. Este mapa, realizado por Antonio delgado, fue una de las primeras experiencias en España de periodismo de datos con mapas. El proyecto original sigue activo en http://delgado.tv/mapa-asesinatos-madrid/
